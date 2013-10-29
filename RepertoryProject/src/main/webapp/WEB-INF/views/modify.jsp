@@ -1,0 +1,107 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"
+	import="java.util.Date, fr.esiea.repertoryproject.metier.model.Contact, java.util.Calendar"%>
+
+<div id="stylized" class="addform" style="width: 370px">
+	<form id="form" name="form" method="post" action="modifycontact">
+		<h1>Modifier un contact</h1>
+		<p>Cette page vous permet de modifier les informations relatives à
+			un contact</p>
+
+		<input type="hidden" name="contactHashCode" id="contactHashCode" value="${contact.hashCode()}" /> 
+
+		<table>
+			<tr>
+				<td><label> Prénom <span class="small"> Prénom
+							du contact </span>
+				</label></td>
+				<td><input type="text" name="prenom" id="prenom"
+					required="required" value="${contact.getPrenom()}" /></td>
+			</tr>
+			<tr>
+				<td><label> Nom <span class="small"> Nom du
+							contact </span>
+				</label></td>
+				<td><input type="text" name="nom" id="nom" required="required"
+					value="${contact.getNom()}" /></td>
+			</tr>
+			<tr>
+				<td><label> E-mail <span class="small"> Adresse
+							e-mail </span>
+				</label></td>
+				<td><input type="email" name="email" id="email"
+					required="required" value="${contact.getEmail()}" /></td>
+			</tr>
+			<tr>
+				<td><label> Date de Naissance <span class="small">
+							Du nouveau contact </span>
+				</label></td>
+				<td><input type="date" name="dateNaissance" id="dateNaissance"
+					required="required"
+					value="${dateformat.format(contact.getDateNaissance())}" /></td>
+			</tr>
+			<tr>
+				<td><label> Actif <span class="small"> Le
+							contact est-il actif </span>
+				</label></td>
+				<td><input type="checkbox" name="actif" id="actif"
+					value="${contact.getActif()}" /></td>
+			</tr>
+		</table>
+		<br>
+		<div id="addresses">
+			<c:if test="${not empty contact.getAdresses()}">
+				<c:forEach var="adresse" items="${contact.getAdresses()}">
+					<b>${adresse.getIntitule()}</b> - ${adresse.toString()} 
+					<a href="javascript:openLink('removeaddress?contactHashCode=${contact.hashCode()}&addressHashCode=${adresse.hashCode()}')">Supprimer</a>
+				</c:forEach>
+			</c:if>
+		</div>
+		<a href="javascript:showAddAddressForm()">Ajouter une adresse au contact</a> <br> <br>
+
+		<button type="submit" style="width: 160px">Enregistrer les modifications</button>
+
+		<div class="spacer"></div>
+	</form>
+	<form id="addAddressForm" name="addAddressForm" method="get" action="javascript:addAddressModifyForm()">
+		<p>&nbsp;</p>
+
+		<h3>Ajouter une adresse au contact</h3>
+
+		<input type="hidden" name="contactHashCode" id="contactHashCode" value="${contact.hashCode()}" /> 
+		<input type="hidden" name="addressHashCode" id="addressHashCode" />
+
+		<table>
+			<tr>
+				<td><label> Intiltulé de l'Adresse <span class="small">
+							Maison, Bureau etc. </span></label></td>
+				<td><input type="text" name="intitule" id="intitule"
+					required="required" /></td>
+			</tr>
+			<tr>
+				<td><label> Numéro de rue</label></td>
+				<td><input type="text" name="numero" id="numero"
+					required="required" /></td>
+			</tr>
+			<tr>
+				<td><label> Nom de la rue </label></td>
+				<td><input type="text" name="rue" id="rue" required="required" /></td>
+			</tr>
+			<tr>
+				<td><label> Code postal </label></td>
+				<td><input type="text" name="codePostal" id="codePostal"
+					required="required" /></td>
+			</tr>
+			<tr>
+				<td><label> Ville </label></td>
+				<td><input type="text" name="ville" id="ville"
+					required="required" /></td>
+			</tr>
+		</table>
+		<br>
+		<button type="submit">Ajouter</button>
+	</form>
+	<script>hideAddAddressForm();</script>
+</div>
