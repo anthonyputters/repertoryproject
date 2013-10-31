@@ -1,37 +1,42 @@
 package fr.esiea.repertoryproject.controllers;
 
-import java.text.DateFormat;
-import java.util.Date;
+import java.text.SimpleDateFormat;
 import java.util.Locale;
+import java.util.Set;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-/**
- * Handles requests for the application home page.
- */
+import fr.esiea.repertoryproject.metier.model.Contact;
+import fr.esiea.repertoryproject.metier.service.ServiceContact;
+
 @Controller
 public class SearchController {
-	private static final Logger logger = LoggerFactory.getLogger(SearchController.class);
-	
-	/**
-	 * Simply selects the home view to render by returning its name.
-	 */
 	@RequestMapping(value = "/search", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
+		return "search";
+	}
+	
+	@RequestMapping(value = "/searchContact", method = RequestMethod.GET)
+	public String searchResult(HttpServletRequest request, ModelMap model) {
+		String prenom = request.getParameter("prenom");
+		String nom = request.getParameter("nom");
+		String email = request.getParameter("email");
+	
+		Set<Contact> correspondingContacts = ServiceContact.search(nom, prenom, email);
+
+		model.addAttribute("dateformat", new SimpleDateFormat("dd/MM/yyyy"));
+		model.addAttribute("prenom", prenom);
+		model.addAttribute("nom", nom);
+		model.addAttribute("email", email);
+		model.addAttribute("contacts", correspondingContacts);
 		
 		return "search";
 	}
+
 }

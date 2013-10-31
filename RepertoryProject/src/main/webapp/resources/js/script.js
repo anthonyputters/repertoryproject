@@ -56,3 +56,12 @@ function addAddressModifyForm() {
 
 	openLink("addaddress?contactHashCode="+contactHashCode.value+"&intitule="+intitule.value+"&numero="+numero.value+"&rue="+rue.value+"&codePostal="+codePostal.value+"&ville="+ville.value);
 }
+
+function sendSearchFormData() {
+	var searchContactForm = document.getElementById("searchContactForm");
+	var prenom = searchContactForm.prenom.value;
+	var nom = searchContactForm.nom.value;
+	var email = searchContactForm.email.value;
+		
+	openLink("searchContact?prenom="+prenom+"&nom="+nom+"&email="+email);
+}

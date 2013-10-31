@@ -4,7 +4,13 @@
 	pageEncoding="ISO-8859-1"
 	import="java.util.Date, fr.esiea.repertoryproject.metier.model.Contact, java.util.Calendar"%>
 
-<div id="stylized" class="addform" style="width: 370px">
+<center>
+	<div style="margin-top: 15px; width: 402px;" align="left">
+		<div class="return_to_repertory" onClick="openLink('repertory')"><table height=28><tr><td><img src="resources/img/back.png" height=20 style="opacity: 0.7; filter: alpha(opacity=70);"></td><td><h4 style="margin: 0px; color: #39A1DB;">&nbsp;Retourner au répertoire</h4></td></tr></table></div>
+	</div>
+</center>
+
+<div id="stylized" class="addform" style="width: 370px; margin-top: 0px;">
 	<form id="form" name="form" method="post" action="modifycontact">
 		<h1>Modifier un contact</h1>
 		<p>Cette page vous permet de modifier les informations relatives à

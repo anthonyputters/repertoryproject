@@ -1,6 +1,7 @@
 package fr.esiea.repertoryproject.metier.service;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
@@ -19,6 +20,16 @@ public class ServiceContact {
 		return contact;
 	}
 	
+	public static Contact createContact(String nom, String prenom, String email, int annee, int mois, int jour, Boolean actif) {
+		Calendar calendar = Calendar.getInstance();
+		calendar.set(Calendar.YEAR, annee);
+		calendar.set(Calendar.MONTH, mois);
+		calendar.set(Calendar.DAY_OF_MONTH, jour);
+		Contact contact = new Contact(nom, prenom, email, calendar.getTime(), actif);
+		DataBase.addContact(contact);
+		return contact;
+	}
+
 	public static void associateContactAdresse(Contact contact, Adresse adresse) {
 		DataBase.addAdresse(adresse);
 		contact.addAdresse(adresse);
@@ -52,8 +63,8 @@ public class ServiceContact {
 		DataBase.deleteAdresse(adresse);
 	}
 
-	public static Set<Contact> search(String nom, String prenom, String email, Date dateNaissance, DateSearch dateSearch) {
-		return DataBase.search(nom, prenom, email, dateNaissance, dateSearch);
+	public static Set<Contact> search(String nom, String prenom, String email) {
+		return DataBase.search(nom, prenom, email);
 	}
 	
 	public static Contact findByHashCode(int hashCode) {

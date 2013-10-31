@@ -8,6 +8,7 @@ body {
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-size: 1350px;
+	line-height: 18px;
 }
 
 button {
@@ -25,4 +26,49 @@ button {
 	bottom: 0;
 	width: 100%;
 	overflow: auto;
+}
+
+#search_result{
+	width: 373px;
+	margin: 0 auto;
+	margin-top: 20px;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-bottom: 2%;
+	text-align: justify;
+	border: solid 2px #b7ddf2;
+}
+
+.result {
+	display: inline-block;
+	vertical-align: top;
+	border-radius: 6px;
+	background-color: #ebf4fb;
+	padding: 1%;
+	margin: 5px 5px 10px 12px;
+	width:90%;
+}
+
+.result h3 {
+	border-radius: 3px;
+	margin-top: 0px;
+	background-color: #b7ddf2;
+}
+
+.link {
+	cursor: pointer;
+}
+
+.return_to_repertory {
+	cursor: pointer;
+	display: inline-block;
+	
+}
+
+#hor-zebra tr:hover td {
+	background-color: #b7ddf2;
+}
+
+.return_to_repertory:hover {
+	background-color: #ebf4fb;
 }
