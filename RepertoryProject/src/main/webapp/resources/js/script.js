@@ -1,3 +1,4 @@
+
 function updateMenu(id) {
 	document.getElementById("li"+id).className = 'active';
 	for(var i = 1 ; i < 4 ; i++)
@@ -46,6 +47,8 @@ function addAddress() {
 	rue.value = "";
 	codePostal.value = "";
 	ville.value = "";
+	
+	document.getElementById("add_msg").innerHTML = "Ajouter une autre adresse";
 }
 
 function addAddressModifyForm() {

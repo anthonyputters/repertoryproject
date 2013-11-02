@@ -5,7 +5,7 @@
 	import="java.util.Date, fr.esiea.repertoryproject.metier.model.Contact, java.util.Calendar"%>
 
 <center>
-	<div style="margin-top: 15px; width: 402px;" align="left">
+	<div style="margin-top: 15px; width: 550px;" align="left">
 		<div class="return_to_repertory" onClick="openLink('repertory')">
 			<table height=28>
 				<tr>
@@ -20,7 +20,7 @@
 </center>
 
 <div id="stylized" class="addform"
-	style="width: 370px; margin-top: 0px;">
+	style="margin-top: 0px;">
 	<form id="form" name="form" method="post" action="modifycontact">
 		<h1>Modifier un contact</h1>
 		<p>Cette page vous permet de modifier les informations relatives à
@@ -80,7 +80,7 @@
 		<a href="javascript:showAddAddressForm()">Ajouter une adresse au
 			contact</a> <br> <br>
 
-		<button type="submit" style="width: 160px">Enregistrer les
+		<button type="submit" style="width: 270px">Enregistrer les
 			modifications</button>
 
 		<div class="spacer"></div>

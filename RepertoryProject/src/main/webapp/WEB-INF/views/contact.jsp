@@ -8,7 +8,7 @@
 </head>
 <body>
 	<center>
-		<div style="margin-top: 15px; width: 402px;" align="left">
+		<div style="margin-top: 15px; width: 550px;" align="left">
 			<div class="return_to_repertory" onClick="openLink('repertory')"><table height=28><tr><td><img src="resources/img/back.png" height=20 style="opacity: 0.7; filter: alpha(opacity=70);"></td><td><h4 style="margin: 0px; color: #39A1DB;">&nbsp;Retourner au répertoire</h4></td></tr></table></div>
 		</div>
 		<div id="search_result" style="margin-top: 0px;">

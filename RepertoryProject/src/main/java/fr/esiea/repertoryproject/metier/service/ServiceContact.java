@@ -47,7 +47,7 @@ public class ServiceContact {
 		List<Contact> sortedContact = new ArrayList<Contact>(DataBase.getContacts());
 		Collections.sort(sortedContact, new Comparator<Contact>() {
 		    public int compare(Contact contact1, Contact contact2) {
-		        return contact1.getNom().compareTo(contact2.getNom());
+		        return contact1.getNom().toLowerCase().compareTo(contact2.getNom().toLowerCase());
 		    }
 		});
 		

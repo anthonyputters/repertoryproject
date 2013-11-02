@@ -1,6 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<div id="stylized" class="addform" style="width: 370px">
+<div id="stylized" class="addform">
 	<form id="searchContactForm" name="searchContactForm" method="post" action="javascript:sendSearchFormData()">
 		<h1>Rechercher</h1>
 		<p>Cette page vous permet de rechercher un contact par Prénom et/ou Nom et/ou E-mail.</p>

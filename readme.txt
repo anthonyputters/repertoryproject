@@ -10,6 +10,9 @@ repertoire : src/main/webapp/resources/css/
 Les fichiers contenant le javascript se trouvent dans 
 le repertoire : str/main/webapp/resources/js/
 
+Le projet est accessible sur internet à partir de 
+l'adresse : http://www.repertoryproject.cloudbees.net/
+
 Fonctionnalités :
 - Ajout de contact et d'adresses associées
 - Affichage des contacts enregistrés

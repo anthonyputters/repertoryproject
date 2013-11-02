@@ -1,4 +1,4 @@
-<div id="stylized" class="addform" style="width: 370px">
+<div id="stylized" class="addform">
 	<form id="form" name="form" method="post" action="addcontact">
 		<h1>Ajouter un contact</h1>
 		<p>Cette page vous permet d'ajouter un contact à votre répertoire</p>
@@ -37,7 +37,7 @@
 		</table>
 		<br>
 		<div id="addresses"></div>
-		<a href="javascript:showAddAddressForm()">Ajouter une adresse au contact</a>
+		<a href="javascript:showAddAddressForm()"><span id="add_msg">Ajouter une adresse au contact</span></a>
 		<br>
 		<br>
 		<!-- Les 5 champs cachés suivants servent à sauvegarder les adresses ajoutées -->
@@ -48,7 +48,7 @@
 		<input type="hidden" name="codePostalHide" id="codePostalHide" />
 		<input type="hidden" name="villeHide" id="villeHide" />
 		
-		<button type="submit">Ajouter</button>
+		<button type="submit">Valider</button>
 
 		<div class="spacer"></div>
 	</form>

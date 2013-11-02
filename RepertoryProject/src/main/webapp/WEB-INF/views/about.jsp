@@ -1,10 +1,10 @@
 
-<div id="search_result">
+<div id="search_result" style="margin-top: 30px;">
 	<table>
 		<tr>
-			<td><img src="resources/img/icon.jpg" width=150
+			<td><img src="resources/img/icon.jpg" width=200
 				style="margin-top: 10px;"></td>
-			<td width=215><br>
+			<td width=300>
 			<h1 align="left">Repertory</h1><h1 align="right">Project</h1></td>
 		</tr>
 	</table>

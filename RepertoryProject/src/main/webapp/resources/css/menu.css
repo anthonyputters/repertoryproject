@@ -21,7 +21,7 @@
   clear: both;
 }
 #cssmenu {
-  zoom: 0.7;
+  zoom: 1;
   height: 69px;
   background: url(../img/bottom-bg.png) repeat-x center bottom;
   border-radius: 2px;

@@ -1,7 +1,7 @@
 body {
 	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial,
 		Helvetica, sans-serif;
-	font-size: 12px;
+	font-size: 16px;
 }
 
 p,h1,form {
@@ -21,20 +21,20 @@ p,h1,form {
 }
 
 #stylized {
-	margin-top: 20px;
+	margin-top: 30px;
 	border: solid 2px #b7ddf2;
 	background: #ebf4fb;
-	width: 400px;
+	width: 530px;
 }
 
 #stylized h1 {
-	font-size: 14px;
+	font-size: 22px;
 	font-weight: bold;
-	margin-bottom: 8px;
+	margin-bottom: 12px;
 }
 
 #stylized p {
-	font-size: 11px;
+	font-size: 15px;
 	color: #666666;
 	margin-bottom: 20px;
 	border-bottom: solid 1px #b7ddf2;
@@ -42,29 +42,31 @@ p,h1,form {
 }
 
 #stylized label {
+	font-size: 17px;
 	display: block;
 	font-weight: bold;
 	text-align: right;
-	width: 140px;
+	width: 200px;
 	float: left;
 }
 
 #stylized .small {
 	color: #666666;
 	display: block;
-	font-size: 11px;
+	font-size: 15px;
 	font-weight: normal;
 	text-align: right;
-	width: 140px;
+	width: 200px;
 }
 
 #stylized input {
 	float: left;
-	font-size: 12px;
+	font-size: 16px;
 	padding: 4px 2px;
 	border: solid 1px #aacfe4;
-	width: 200px;
-	margin: 9px 0px 13px 10px;
+	width: 260px;
+	height: 22px;
+	margin: 12px 0px 17px 13px;
 }
 
 #stylized button {
@@ -73,13 +75,13 @@ p,h1,form {
 	padding: 0;
 	clear: both;
 	margin-left: 150px;
-	width: 125px;
-	height: 31px;
+	width: 160px;
+	height: 34px;
 	background-color: #666666;
 	text-align: center;
 	line-height: 31px;
 	color: #FFFFFF;
-	font-size: 11px;
+	font-size: 15px;
 	font-weight: bold;
 }
 
@@ -87,6 +89,8 @@ p,h1,form {
 	float: left;
 	padding: 3px 1px;
 	border: solid 1px #aacfe4;
-	width: 205px;
-	margin: 12px 0px 10px 10px;
+	width: 265px;
+	height: 32px;
+	font-size: 16px;
+	margin: 12px 0px 17px 13px;
 }
