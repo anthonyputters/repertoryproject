@@ -3,6 +3,7 @@ package fr.esiea.repertoryproject.metier.model;
 public class Adresse {
 	private String intitule;
 	private String numero;
+	private String voie;
 	private String rue;
 	private String codePostal;
 	private String ville;
@@ -11,9 +12,10 @@ public class Adresse {
 		
 	}
 	
-	public Adresse(String intitule, String numero, String rue, String codePostal, String ville) {
+	public Adresse(String intitule, String numero, String voie, String rue, String codePostal, String ville) {
 		this.intitule = intitule;
 		this.numero = numero;
+		this.setVoie(voie);
 		this.rue = rue;
 		this.codePostal = codePostal;
 		this.ville = ville;
@@ -25,6 +27,14 @@ public class Adresse {
 
 	public void setNumero(String numero) {
 		this.numero = numero;
+	}
+
+	public String getVoie() {
+		return voie;
+	}
+
+	public void setVoie(String voie) {
+		this.voie = voie;
 	}
 
 	public String getRue() {
@@ -63,7 +73,9 @@ public class Adresse {
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append(numero);
-		builder.append(" rue ");
+		builder.append(" ");
+		builder.append(voie);
+		builder.append(" ");
 		builder.append(rue);
 		builder.append(", ");
 		builder.append(codePostal);
@@ -81,5 +93,4 @@ public class Adresse {
         hash = hash * 6 + ville.hashCode();
         return hash;
     }
-
 }

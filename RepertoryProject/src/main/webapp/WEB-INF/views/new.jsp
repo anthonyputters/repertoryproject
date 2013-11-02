@@ -43,6 +43,7 @@
 		<!-- Les 5 champs cachés suivants servent à sauvegarder les adresses ajoutées -->
 		<input type="hidden" name="intituleHide" id="intituleHide" />
 		<input type="hidden" name="numeroHide" id="numeroHide" />
+		<input type="hidden" name="voieHide" id="voieHide" />
 		<input type="hidden" name="rueHide" id="rueHide" />
 		<input type="hidden" name="codePostalHide" id="codePostalHide" />
 		<input type="hidden" name="villeHide" id="villeHide" />
@@ -61,23 +62,33 @@
 			<tr>
 				<td><label> Intiltulé de l'Adresse <span class="small">
 							Maison, Bureau etc. </span></label></td>
-				<td><input type="text" name="intitule" id="intitule" required="required"/></td>
+				<td><input type="text" name="intitule" id="intitule" required="required" /></td>
 			</tr>
 			<tr>
 				<td><label> Numéro de rue</label></td>
-				<td><input type="text" name="numero" id="numero" required="required" /></td>
+				<td><input type="text" name="numero" id="numero" required="required" style="margin-top: 6px; margin-bottom: 6px;" /></td>
+			</tr>
+			<tr>
+				<td><label> Type de voie </label></td>
+				<td><select name="voie" id="voie" style="margin-top: 6px; margin-bottom: 6px;">
+							<option value="rue">rue</option>
+							<option value="avenue">avenue</option>
+							<option value="boulevard">boulevard</option>
+							<option value="impasse">impasse</option>
+							<option value="place">place</option>
+				</select></td>
 			</tr>
 			<tr>
 				<td><label> Nom de la rue </label></td>
-				<td><input type="text" name="rue" id="rue" required="required" /></td>
+				<td><input type="text" name="rue" id="rue" required="required" style="margin-top: 6px; margin-bottom: 6px;" /></td>
 			</tr>
 			<tr>
 				<td><label> Code postal </label></td>
-				<td><input type="text" name="codePostal" id="codePostal" required="required" /></td>
+				<td><input type="text" name="codePostal" id="codePostal" required="required" style="margin-top: 6px; margin-bottom: 6px;" /></td>
 			</tr>
 			<tr>
 				<td><label> Ville </label></td>
-				<td><input type="text" name="ville" id="ville" required="required" /></td>
+				<td><input type="text" name="ville" id="ville" required="required" style="margin-top: 6px; margin-bottom: 6px;" /></td>
 			</tr>
 		</table>
 		<br>

@@ -27,7 +27,7 @@
 			<b>Adresses : </b>
 			<c:if test="${not empty contact.getAdresses()}">
 				<c:forEach var="adresse" items="${contact.getAdresses()}">
-					<li>${adresse.toString()}</li>
+					<li><b>${adresse.getIntitule()}</b> - ${adresse.toString()}</li>
 				</c:forEach>
 			</c:if>
 			<c:if test="${empty contact.getAdresses()}">

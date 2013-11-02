@@ -27,17 +27,19 @@ function addAddress() {
 
 	var intitule = document.getElementById("intitule");
 	var numero = document.getElementById("numero");
+	var voie = document.getElementById("voie");
 	var rue = document.getElementById("rue");
 	var codePostal = document.getElementById("codePostal");
 	var ville = document.getElementById("ville");
 	
 	document.getElementById("intituleHide").value += intitule.value + ";";
 	document.getElementById("numeroHide").value += numero.value + ";";
+	document.getElementById("voieHide").value += voie.value + ";";
 	document.getElementById("rueHide").value += rue.value + ";";
 	document.getElementById("codePostalHide").value += codePostal.value + ";";
 	document.getElementById("villeHide").value += ville.value + ";";
 
-	document.getElementById("addresses").innerHTML += "<b>" + intitule.value + "</b> - " + numero.value + " rue " + rue.value + ", " + codePostal.value + " " + ville.value + "<br>";
+	document.getElementById("addresses").innerHTML += "<b>" + intitule.value + "</b> - " + numero.value + " " + voie.value + " " + rue.value + ", " + codePostal.value + " " + ville.value + "<br>";
 	
 	intitule.value = "";
 	numero.value = "";
@@ -51,10 +53,11 @@ function addAddressModifyForm() {
 	var intitule = document.getElementById("intitule");
 	var numero = document.getElementById("numero");
 	var rue = document.getElementById("rue");
+	var voie = document.getElementById("voie");
 	var codePostal = document.getElementById("codePostal");
 	var ville = document.getElementById("ville");
 
-	openLink("addaddress?contactHashCode="+contactHashCode.value+"&intitule="+intitule.value+"&numero="+numero.value+"&rue="+rue.value+"&codePostal="+codePostal.value+"&ville="+ville.value);
+	openLink("addaddress?contactHashCode="+contactHashCode.value+"&intitule="+intitule.value+"&numero="+numero.value+"&voie="+voie.value+"&rue="+rue.value+"&codePostal="+codePostal.value+"&ville="+ville.value);
 }
 
 function sendSearchFormData() {

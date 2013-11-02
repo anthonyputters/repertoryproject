@@ -53,6 +53,7 @@ public class NewController {
 		// Nous récupérons les adresses ajoutées par l'utilisateur
 		String intitule = request.getParameter("intituleHide");
 		String numero = request.getParameter("numeroHide");
+		String voie = request.getParameter("voieHide");
 		String rue = request.getParameter("rueHide");
 		String codePostal = request.getParameter("codePostalHide");
 		String ville = request.getParameter("villeHide");
@@ -61,6 +62,7 @@ public class NewController {
 		
 		String[] intituleData = intitule.split(";");
 		String[] numeroData = numero.split(";");
+		String[] voieData = voie.split(";");
 		String[] rueData = rue.split(";");
 		String[] codePostalData = codePostal.split(";");
 		String[] villeData = ville.split(";");
@@ -68,7 +70,7 @@ public class NewController {
 		// Nous ajoutons les adresses au contact
 		for(int i = 0 ; i < intituleData.length ; i++) {
 			if(!numeroData[i].equals("")) {
-				Adresse adresse = ServiceAdresse.createAdresse(intituleData[i], numeroData[i], rueData[i], codePostalData[i], villeData[i]);
+				Adresse adresse = ServiceAdresse.createAdresse(intituleData[i], numeroData[i], voieData[i], rueData[i], codePostalData[i], villeData[i]);
 				ServiceContact.associateContactAdresse(contact, adresse);
 			}
 		}
