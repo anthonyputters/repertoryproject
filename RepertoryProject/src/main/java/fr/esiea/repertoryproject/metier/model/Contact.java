@@ -1,9 +1,7 @@
 package fr.esiea.repertoryproject.metier.model;
 
 import java.util.Date;
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 import org.springframework.format.annotation.DateTimeFormat;
@@ -13,6 +11,7 @@ public class Contact {
 	private String nom;
 	private String prenom;
 	private String email;
+	// Nous spécifions le format de la date
 	@DateTimeFormat(iso = ISO.DATE, pattern = "yyyy-MM-dd")
 	private Date dateNaissance;
 	private Boolean actif;
@@ -109,6 +108,7 @@ public class Contact {
 	
     @Override
     public int hashCode() {
+    	// Nous générons le hashCode propre à chaque contact
         int hash = 1;
         hash = hash * 17 + nom.hashCode();
         hash = hash * 31 + prenom.hashCode();

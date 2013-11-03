@@ -1,11 +1,11 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"
 	import="java.util.Date, fr.esiea.repertoryproject.metier.model.Contact, java.util.Calendar"%>
 
 <center>
-	<div style="margin-top: 15px; width: 550px;" align="left">
+	<div style="margin-top: 20px; width: 560px;" align="left">
 		<div class="return_to_repertory" onClick="openLink('repertory')">
 			<table height=28>
 				<tr>

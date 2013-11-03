@@ -86,8 +86,10 @@ public class Adresse {
 	
     @Override
     public int hashCode() {
+    	// Nous générons le hashCode propre à chaque l'adresse
         int hash = 1;
         hash = hash * 7 + numero.hashCode();
+        hash = hash * 8 + voie.hashCode();
         hash = hash * 12 + rue.hashCode();
         hash = hash * 19 + codePostal.hashCode();
         hash = hash * 6 + ville.hashCode();

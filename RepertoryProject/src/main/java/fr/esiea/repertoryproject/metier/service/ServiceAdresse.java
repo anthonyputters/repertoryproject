@@ -3,6 +3,7 @@ package fr.esiea.repertoryproject.metier.service;
 import fr.esiea.repertoryproject.data.DataBase;
 import fr.esiea.repertoryproject.metier.model.Adresse;
 
+// Class fournissant un certain nombre de services relatifs aux adresses
 public class ServiceAdresse {
 	public static Adresse createAdresse(String intitule, String numero, String voie, String rue, String codePostal, String ville) {
 		Adresse adresse = new Adresse(intitule, numero, voie, rue, codePostal, ville);

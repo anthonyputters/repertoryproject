@@ -10,19 +10,19 @@
 				<td><label> Prénom <span class="small"> Prénom
 							du contact </span>
 				</label></td>
-				<td><input type="text" name="prenom" id="prenom"/></td>
+				<td><input type="text" name="prenom" id="prenom" value="${prenom}" /></td>
 			</tr>
 			<tr>
 				<td><label> Nom <span class="small"> Nom du
 							contact </span>
 				</label></td>
-				<td><input type="text" name="nom" id="nom"/></td>
+				<td><input type="text" name="nom" id="nom" value="${nom}" /></td>
 			</tr>
 			<tr>
 				<td><label> E-mail <span class="small"> Adresse
 							e-mail </span>
 				</label></td>
-				<td><input type="email" name="email" id="email"/></td>
+				<td><input type="email" name="email" id="email" value="${email}" /></td>
 			</tr>
 		</table>
 		<br>

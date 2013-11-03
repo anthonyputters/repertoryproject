@@ -6,6 +6,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -13,6 +14,7 @@ import fr.esiea.repertoryproject.data.DataBase;
 import fr.esiea.repertoryproject.metier.model.Adresse;
 import fr.esiea.repertoryproject.metier.model.Contact;
 
+// Class fournissant un certain nombre de services relatifs aux contacts
 public class ServiceContact {
 	public static Contact createContact(String nom, String prenom, String email, Date dateNaissance, Boolean actif) {
 		Contact contact = new Contact(nom, prenom, email, dateNaissance, actif);
@@ -64,7 +66,21 @@ public class ServiceContact {
 	}
 
 	public static Set<Contact> search(String nom, String prenom, String email) {
-		return DataBase.search(nom, prenom, email);
+		Set<Contact> result = new HashSet<Contact>();
+		
+		for (Contact contact : DataBase.getContacts()) {
+			if(!contact.getNom().toLowerCase().contains(nom.toLowerCase()))
+				continue;
+
+			if(!contact.getPrenom().toLowerCase().contains(prenom.toLowerCase()))
+				continue;
+
+			if(!contact.getEmail().toLowerCase().contains(email.toLowerCase()))
+				continue;
+			
+			result.add(contact);
+		}
+		return result;
 	}
 	
 	public static Contact findByHashCode(int hashCode) {

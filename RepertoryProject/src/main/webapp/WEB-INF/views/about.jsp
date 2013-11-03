@@ -14,6 +14,8 @@
 	homme-machine dispensé à l'ESIEA par Nicolas ANDRE.</p>
 	<br><br>
 	<b>Equipe de développement :</b>
-	<li>Lydia LENG (leng@et.esiea.fr)</li>
-	<li>Anthony PUTTERS (putters@et.esiea.fr)</li>
+	<ul>
+		<li>Lydia LENG (leng@et.esiea.fr)</li>
+		<li>Anthony PUTTERS (putters@et.esiea.fr)</li>
+	</ul>
 </div>
